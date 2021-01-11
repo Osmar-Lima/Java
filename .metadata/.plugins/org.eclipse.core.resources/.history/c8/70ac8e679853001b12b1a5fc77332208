@@ -1,0 +1,21 @@
+package br.com.osmar.drogaria.repository;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import br.com.osmar.drogaria.domain.Produto;
+
+@SpringBootTest
+public class ProdutoRepositoryTests {
+	@Test
+	public void inserir() {
+		Produto p1 = new Produto(Short.valueOf("1"), "Coca-Cola", Byte.valueOf("15"), BigDecimal.valueOf(10.50), LocalDate.of(2026, 11, 25));
+		Produto p2 = new Produto(Short.valueOf("2"), "Heineken", Byte.valueOf("23"), BigDecimal.valueOf(8.50), LocalDate.of(2023, 7, 15));
+		Produto p3 = new Produto(Short.valueOf("3"), "Sabonete Dove", Byte.valueOf("23"), BigDecimal.valueOf(2.50), LocalDate.of(2029, 3, 25));
+		Produto p4 = new Produto(Short.valueOf("4"), "Creme Dental", Byte.valueOf("23"), BigDecimal.valueOf(1.99), LocalDate.of(2021, 4, 12));
+		
+	}
+}

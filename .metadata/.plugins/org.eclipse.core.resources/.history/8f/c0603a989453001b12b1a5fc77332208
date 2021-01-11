@@ -1,0 +1,37 @@
+package br.com.osmar.drogaria.domain;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+public class Produto {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // gerar o codigo do produto de forma automatica
+	private Short codigo;
+
+	@Column(length = 50, nullable = false, unique = true)
+	private String descricaoProduto;
+
+	@Column(nullable = false)
+	private Short quantidade;
+									
+	@Column(nullable = false, precision = 5, scale = 2) // precission é referente ao total de numeros e o scale qts desses é depois da virgula
+	private BigDecimal preco;
+
+	@Column(nullable = true)
+	private LocalDate dataDevalidade;
+
+}

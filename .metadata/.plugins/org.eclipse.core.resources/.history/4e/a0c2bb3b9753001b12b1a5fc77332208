@@ -1,0 +1,5 @@
+package br.com.osmar.drogaria.repository;
+
+public interface ProdutoRepository {
+
+}

@@ -1,0 +1,11 @@
+package br.com.osmar.drogaria.repository;
+
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class ProdutoRepositoryTests {
+	@Test
+	public void inserir() {
+		
+	}
+}

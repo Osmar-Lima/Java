@@ -1,0 +1,5 @@
+package br.com.osmar.drogaria.controller;
+
+public class DrogariaController {
+
+}

@@ -1,0 +1,17 @@
+package br.com.osmar.drogaria.domain;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import lombok.Data;
+@Data
+public class Produto {
+	private Short codigo;
+	private String descricaoProduto;
+	private Short quantidade;
+	private BigDecimal preco;
+	private LocalDate dataDevalidade;
+	
+	
+	
+}
