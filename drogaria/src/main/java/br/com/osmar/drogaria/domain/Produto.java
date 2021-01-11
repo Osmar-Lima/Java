@@ -22,23 +22,23 @@ import lombok.NoArgsConstructor;
 public class Produto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // gerar o codigo do produto de forma automatica
-	private Short codigo;
+	private Integer codigo;
 
-	@Column(length = 50, nullable = false, unique = true) //qdo for igual a false quer dizer que é obrigatório
+	@Column(length = 50, nullable = false, unique = true) // qdo for igual a false quer dizer que é obrigatório
 	private String descricao;
 
 	@Column(nullable = false)
 	private Byte quantidade;
-									
-	@Column(nullable = false, precision = 5, scale = 2) // precission é referente ao total de numeros e o scale qts desses é depois da virgula
+
+	@Column(nullable = false, precision = 5, scale = 2) // precission é referente ao total de numeros e o scale qts
+														// desses é depois da virgula
 	private BigDecimal preco;
 
-	@Column(nullable = true) //data de validade opcional
+	@Column(nullable = true) // data de validade opcional
 	private LocalDate dataValidade;
-	
+
 	@ManyToOne
 	@JoinColumn(nullable = false)
 	private Categoria categoria;
-	
 
 }

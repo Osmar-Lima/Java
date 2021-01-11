@@ -11,7 +11,7 @@ public class ProdutoTests {
 	@Test
 	public void criar() {
 		Produto p = new Produto(
-				Short.valueOf("1"),
+				Integer.valueOf("1"),
 				"Coca-Cola",
 				Byte.valueOf("15"),
 				BigDecimal.valueOf(15.10),
